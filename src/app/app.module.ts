@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http'; 
+import { MatTableModule } from '@angular/material/table'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +30,9 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
