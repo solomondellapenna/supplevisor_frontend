@@ -1,1 +1,15 @@
-<p>search works!</p>
+<form [formGroup]="supplementForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">
+          Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <button class="button" type="submit">Search</button>
+</form>
+
+<mat-card>
+    <mat-card-content *ngFor="let item of supplement"></mat-card-content>
+    <mat-card-content>{{ supplement![0].name }}</mat-card-content>
+    <mat-card-content *ngFor="let item of supplement![0].references">{{ item }}</mat-card-content>
+</mat-card>

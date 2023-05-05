@@ -19,6 +19,10 @@ export class SupplementsService {
   getAll(): Observable<Supplement[]>{
     return this.http.get<Supplement[]>(baseUrl + 'supplements');
   }
+
+  getOne(supplement: String): Observable<Supplement[]>{
+    return this.http.get<Supplement[]>(baseUrl + 'supplements/' + supplement);
+  }
   // getSupplements() {
   //   return this.http.get("http://localhost:3000/" + 'supplements');
   // }
